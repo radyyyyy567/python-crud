@@ -42,4 +42,3 @@ def update_employee(employee_id, name=None, department=None, salary=None):
         if connection:
             connection.close()
 
-update_employee("1", "samsul",  "", "")

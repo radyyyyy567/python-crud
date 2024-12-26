@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Application</title>
+</head>
+<body>
+    <h1>Users</h1>
+    <a href="{{ url_for('create') }}">Create a New User</a>
+    <ul>
+        {% for employee in employees %}
+            <li>{{ employee[0] }} ({{ employee[1] }}) ({{ employee[2] }}) ({{ employee[3] }}) 
+                <a href="{{ url_for('update', employee_id=employee[0]) }}">Edit</a> 
+                <form action="{{ url_for('delete', employee_id=employee[0]) }}" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

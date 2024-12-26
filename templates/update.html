@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit User</title>
+</head>
+<body>
+    <h1>Edit User</h1>
+    <form action="{{ url_for('update', id_employee=employee[0]) }}" method="POST">
+        id: <input type="text" name="id_employee" value="{{ id_employee }}" required><br>
+        Nama: <input type="text" name="name" value="{{ employee[1] }}" required><br>
+        Departement: <input type="text" name="departement" value="{{ employee[2] }}" required><br>
+        Salary: <input type="text" name="salary" value="{{ employee[3] }}" required><br>
+        <button type="submit">Update Employee</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Employees</a>
+</body>
+</html>

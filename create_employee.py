@@ -23,4 +23,3 @@ def create_employee(employee_id, name, department, salary):
         if connection:
             connection.close()
 
-create_employee("2", "jerry_2", "axis", 2000000)

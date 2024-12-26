@@ -19,4 +19,3 @@ def delete_employee(employee_id):
             cursor.close()
         if connection:
             connection.close()
-delete_employee("2")
