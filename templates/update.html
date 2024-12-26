@@ -6,8 +6,8 @@
 </head>
 <body>
     <h1>Edit User</h1>
-    <form action="{{ url_for('update', id_employee=employee[0]) }}" method="POST">
-        id: <input type="text" name="id_employee" value="{{ id_employee }}" required><br>
+    <form action="{{ url_for('update', employee_id=employee[0]) }}" method="POST">
+        id: <input type="text" name="employee_id" value="{{ employee[0] }}" required><br>
         Nama: <input type="text" name="name" value="{{ employee[1] }}" required><br>
         Departement: <input type="text" name="departement" value="{{ employee[2] }}" required><br>
         Salary: <input type="text" name="salary" value="{{ employee[3] }}" required><br>

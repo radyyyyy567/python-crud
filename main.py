@@ -26,13 +26,13 @@ def create():
 
 # Page to update a user
 @app.route('/update/<int:employee_id>', methods=['GET', 'POST'])
-def update(user_id):
-    employee = read_employee_by_id
+def update(employee_id):
+    employee = read_employee_by_id(employee_id)
     if request.method == 'POST':
-        id = request.form['id_employee']
+        id = request.form['employee_id']
         name = request.form['name']
         departement = request.form['departement']
-        salary = int(request.form['salary'])
+        salary = float(request.form['salary'])
         update_employee(id, name, departement, salary)
         return redirect(url_for('index'))
     return render_template('update.html', employee=employee)
