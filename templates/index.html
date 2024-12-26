@@ -6,7 +6,7 @@
 </head>
 <body>
     <h1>Users</h1>
-    <a href="{{ url_for('create') }}">Create a New User</a>
+    <a href="{{ url_for('create') }}">Create a New Employees</a>
     <ul>
         {% for employee in employees %}
             <li>{{ employee[0] }} ({{ employee[1] }}) ({{ employee[2] }}) ({{ employee[3] }}) 
