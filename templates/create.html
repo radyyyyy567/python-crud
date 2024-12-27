@@ -5,7 +5,7 @@
     <title>Create User</title>
 </head>
 <body>
-    <h1>Create a New User</h1>
+    <h1>Create a New Employee</h1>
     <form action="{{ url_for('create') }}" method="POST">
         id: <input type="text" name="id_employee" required><br>
         Nama: <input type="text" name="name" required><br>
@@ -13,6 +13,6 @@
         Salary: <input type="text" name="salary" required><br>
         <button type="submit">Create Employee</button>
     </form>
-    <a href="{{ url_for('index') }}">Back to Users</a>
+    <a href="{{ url_for('index') }}">Back to Employess</a>
 </body>
 </html>
